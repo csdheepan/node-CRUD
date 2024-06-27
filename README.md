@@ -34,13 +34,17 @@ This repository demonstrates CRUD operations using Node.js as middleware and MyS
 - **Clone the repository:** git clone https://github.com/csdheepan/node-CRUD.git
 - **Navigate project directory:** cd node-CRUD
 - **Install dependencies:** npm install
+- - **Configure MySQL connection:**
+  - **File creation:** Create a .env file in the root directory.
+  - **.env file:** Add the following environment variables to the .env file:
+                  - **DB_HOST=your-database-host**
+                  - **DB_USER=your-database-username**
+                  - **DB_PASSWORD=your-database-password**
+                  - * DB_NAME=your-database-name**
 - **Configure MySQL connection:** 
- Create a .env file in the root directory. 
- Add the following environment variables to the .env file:
-      DB_HOST=your-database-host
-      DB_USER=your-database-username
-      DB_PASSWORD=your-database-password
-      DB_NAME=your-database-name
+ 
+ 
+     
 - **Run server** Run server using command node server.js.
 
  
