@@ -17,6 +17,26 @@ const User = {
     connection.query(query, callback);
   },
 
+  // //Work POC and Implemented server side pagination.
+  // findAll: (offset,pageSize,callback) => {
+  //  const query = 'SELECT * FROM users ORDER BY id LIMIT ? OFFSET ?';    // Define the query to get the paginated users
+ 
+  //  const countQuery = 'SELECT COUNT(*) AS totalCount FROM users';    // Define the query to get the total count of users
+ 
+  //  // Fetch users with limit and offset
+  //  connection.query(query, [pageSize, offset], (err, results) => {
+  //    if (err) return callback(err);
+ 
+  //    // Fetch total count of users
+  //    connection.query(countQuery, (err, countResult) => {
+  //      if (err) return callback(err);
+ 
+  //      const totalCount = countResult[0].totalCount;
+  //      callback(null, results, totalCount);
+  //    });
+  //  });
+  // },
+
   updateById: (id, userData, callback) => {
     const query = 'UPDATE users SET name = ?, address = ?, gender = ?, phoneNumber = ?, status = ?, country = ?, createdDate = ?, updatedDate = ? WHERE id = ?';
     connection.query(query, [userData.name, userData.address, userData.gender, userData.phoneNumber, userData.status, userData.country, userData.createdDate, userData.updatedDate, id], callback);

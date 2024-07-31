@@ -39,6 +39,19 @@ const UserController = {
     });
   },
 
+  // //Work POC and Implemented server side pagination.
+  // getAllUsers: (req, res) => {
+  //   const page = parseInt(req.query.page, 10) || 0;
+  //   const pageSize = parseInt(req.query.pageSize, 10) || 20;    
+  //   UserService.getAllUsers(page, pageSize, (err, results, totalCount) => {
+  //     if (err) {
+  //       console.error('Error retrieving users:', err);
+  //       return res.status(500).send('Error retrieving users'+ err);
+  //     }
+  //     res.json({ users: results, totalCount });
+  //   });
+  // },
+
   updateUser: (req, res) => {
     const id = req.params.id;
     const userData = req.body;

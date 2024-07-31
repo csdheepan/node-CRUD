@@ -14,6 +14,12 @@ const UserService = {
     User.findAll(callback);
   },
 
+  // //Work POC and Implemented server side pagination.
+  // getAllUsers:(page, pageSize, callback) => {
+  //   const offset = page * pageSize;
+  //   User.findAll(offset,pageSize,callback);
+  // },
+
   updateUser: (id, userData, callback) => {
     User.updateById(id, userData, callback);
   },
